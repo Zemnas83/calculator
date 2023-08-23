@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;  /* Adding a default font for better readability */
+    background-color: lightblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;  /* Added this to stack elements vertically */
+    align-items: center;
+}
+
+.container {
+    width: 350px;
+    border:  2px solid rgb(0, 0, 0);  /* Slight reduction in border thickness */
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional shadow for a 3D feel */
+    background-color: #f5f5f5; /* Slight background color */
+}
+
+.result {
+    width: 100%;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 0px;
+    margin-bottom: 20px;  /* Adjusted margin to only bottom */
+    display: flex;
+    justify-content: flex-end;  /* Right-aligned text */
+    background-color: white;
+    font-size: 1.5em;
+}
+
+.btns-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 buttons in a row */
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    background-color: #eee;
+    font-size: 1.2em;
+    transition: background-color 0.3s;  /* Smooth transition effect for hover */
+    cursor: pointer;
+}
+
+/* Button hover effect for better UX */
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Styling for operational buttons, for differentiation */
+.btn[data-type='operator'] {
+    background-color: #ff8c00;
+    color: white;
+}
+
+.btn[data-type='operator']:hover {
+    background-color: #e87c00;
+}
