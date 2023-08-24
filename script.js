@@ -84,7 +84,7 @@ function operate(op, a, b) {
                 return a + b;
             case "-":
                 return a - b;
-            case "&times;":  // Using "X" based on your HTML for multiplication
+            case "X":  
                 return a * b;
             case "/":
                 if (b === 0) {
